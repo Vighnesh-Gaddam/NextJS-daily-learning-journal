@@ -1,12 +1,15 @@
 import { FaStar } from "react-icons/fa";
 
-interface MovieProps {
-  params: Promise<{ id: string }>;
+interface MovieParams {
+  id: string;
 }
 
-export default async function MovieDetails({ params }: MovieProps) {
-  // ✅ Await params before using
-  const { id } = await params;
+export default async function MovieDetails({
+  params,
+}: {
+  params: Promise<MovieParams>;
+}) {
+  const { id } = await params; // ✅ Required by Next.js
 
   const movies = [
     {
