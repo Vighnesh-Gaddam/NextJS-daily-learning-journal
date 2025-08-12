@@ -6,7 +6,7 @@ interface MovieProps {
   };
 }
 
-export default function MovieDetails({ params }: MovieProps) {
+export default async function MovieDetails({ params }: MovieProps) {
   const movies = [
     {
       id: "1",
