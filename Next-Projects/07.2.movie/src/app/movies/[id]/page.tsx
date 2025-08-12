@@ -1,12 +1,13 @@
 import { FaStar } from "react-icons/fa";
 
 interface MovieProps {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }
 
 export default async function MovieDetails({ params }: MovieProps) {
+  // ✅ Await params before using
+  const { id } = await params;
+
   const movies = [
     {
       id: "1",
@@ -42,7 +43,7 @@ export default async function MovieDetails({ params }: MovieProps) {
     },
   ];
 
-  const movie = movies.find((movie) => movie.id === params.id);
+  const movie = movies.find((movie) => movie.id === id);
 
   return (
     <div className="p-8 space-y-8 bg-gray-900 min-h-screen">
