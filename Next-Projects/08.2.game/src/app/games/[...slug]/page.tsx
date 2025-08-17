@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { games, categories } from "@/data/game";
 import { FaGamepad, FaCalendarAlt, FaDesktop, FaStar } from "react-icons/fa";
 
