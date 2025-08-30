@@ -54,6 +54,7 @@ export async function PATCH(
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return new Response(JSON.stringify({ error: "Failed to parse JSON" }), {
       status: 400,
