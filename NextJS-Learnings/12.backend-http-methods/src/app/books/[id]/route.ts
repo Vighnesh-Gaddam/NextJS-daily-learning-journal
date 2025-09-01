@@ -62,3 +62,32 @@ export async function PATCH(
     });
   }
 }
+
+export async function DELETE(
+  _request: Request,
+  { params }: { params: { id: string } }
+) {
+  const bookId = +params.id;
+
+  // Find book index
+  const index = books.findIndex((b) => b.id === bookId);
+
+  // If not found
+  if (index === -1) {
+    return new Response(JSON.stringify({ error: "Book not found" }), {
+      status: 404,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  // Remove book
+  books.splice(index, 1);
+
+  return new Response(
+    JSON.stringify({ message: "Book deleted successfully" }),
+    {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    }
+  );
+}
