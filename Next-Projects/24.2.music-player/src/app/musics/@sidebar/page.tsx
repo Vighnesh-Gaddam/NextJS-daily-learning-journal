@@ -2,7 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Clock, Home, TrendingUp } from "lucide-react"
 
-const Sidebar = () => {
+const Sidebar = async () => {
+    await new Promise((resolve) => setTimeout(() => resolve("Content is currently loading..."), 5000));
   return (
     <aside className="w-64 bg-[#111111] text-white flex flex-col justify-between p-4 min-h-screen">
         <section>
