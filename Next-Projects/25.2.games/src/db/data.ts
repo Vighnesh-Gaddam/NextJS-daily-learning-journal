@@ -12,7 +12,7 @@ export const games = [
   {
     id: 3,
     name: "Red Dead Redemption 2",
-    img: "https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/10137177/49c7d29293f89dfef95969fde62f5c27e7cc780c.jpg?quality=90&strip=all&crop=7.8125,0,84.375,100",
+    img: "https://static0.gamerantimages.com/wordpress/wp-content/uploads/Red-Dead-Redemption-2-Key-Art-Rockstar-Games-738x410.jpg",
   },
   {
     id: 4,
